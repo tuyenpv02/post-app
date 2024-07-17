@@ -31,6 +31,34 @@ function BodyLeft() {
 
     return (
         <>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+                {posts?.map((element, idx) => (
+                    <div className="col" key={idx}>
+                        <div
+                            className="card h-100"
+                            style={{ height: "400px", display: "flex", flexDirection: "column" }}
+                        >
+                            <div className="card-body" style={{ flex: 1 }}>
+                                <h5 className="card-title">{element.title}</h5>
+                                <p className="card-text">
+                                    {element.content} Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Ut magnam optio repudiandae! Fugiat ipsam modi
+                                    harum explicabo voluptate. Quia provident nobis perspiciatis!
+                                </p>
+                            </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    marginTop: "auto",
+                                }}
+                            >
+                                <Button size="large" type="text" icon={<LikeOutlined />}></Button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
             <Space
                 direction="vertical"
                 size="middle"
@@ -44,31 +72,33 @@ function BodyLeft() {
                             span={8}
                             key={idx}
                             style={{
-                                height: 300,
+                                minHeight: 300,
+                                display: "flex",
+                                flexDirection: "column",
                             }}
                         >
                             <Card
                                 style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    flex: 1,
                                     height: "100%",
                                 }}
                             >
-                                <div style={{ backgroundColor: "coral", height: "200" }}>
-                                    <Row justify="center" align="top">
+                                <div
+                                    style={{
+                                        flex: 1,
+                                    }}
+                                >
+                                    <Row justify="center" align="middle" style={{ flex: 1 }}>
                                         <Typography.Title>{element.title}</Typography.Title>
                                         <p>{element.content}</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                            Temporibus asperiores commodi qui animi deserunt
-                                            voluptate est delectus reiciendis alias molestias dolor
-                                            incidunt iste corporis laboriosam ut quis fugiat, fugit
-                                            exercitationem!
-                                        </p>
                                     </Row>
-                                    <Row justify="space-between" align="bottom">
+                                    <Flex align="flex-end">
                                         <Button type="text" icon={<LikeOutlined />}>
                                             Search
                                         </Button>
-                                    </Row>
+                                    </Flex>
                                 </div>
                             </Card>
                         </Col>
