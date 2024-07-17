@@ -4,7 +4,7 @@ import React  from 'react'
 function ButtonConnectWallet() {
 
   return (
-    <div><WalletMultiButton /></div>
+    <div ><WalletMultiButton style={{ backgroundColor:'#fff', color:'#1f1f1f'}} /></div>
   )
 }
 
