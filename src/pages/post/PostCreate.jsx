@@ -30,9 +30,9 @@ const CreatePost = () => {
         fetchData();
     }, []);
 
-    const submitForm = async (val) => {
+    const submitForm = async (values) => {
         const post = {
-            ...val,
+            ...values,
             id: "",
             userID: "",
             status: 1,

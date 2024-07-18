@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/posts";
-class PostService {
+const API = "http://localhost:5000/interactPost";
+class InteractPostService {
     // get all
     static getPosts() {
         return axios.get(API);
@@ -11,7 +11,10 @@ class PostService {
     static getById(id) {
         return axios.get(`${API}/${id}`);
     }
-
+    // find postId - userId
+    static getByPostIdAndUserId(postId, userId) {
+        return axios.get(`${API}?postId=${postId}&userId=${userId}`);
+    }
     // add
     static add(data) {
         return axios.post(API, data);
@@ -23,4 +26,4 @@ class PostService {
     }
 }
 
-export default PostService;
+export default InteractPostService;

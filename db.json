@@ -1,77 +1,61 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Đánh giá sản phẩm nào đó",
-      "content": "lorem 20",
-      "userID": 1,
+      "id": "Post001",
+      "title": "Linda (QE)",
+      "content": "Ae ai làm java dev ở đây cho mình xin kinh nghiệm phỏng vấn và môi trường thế nào ạ",
+      "userID": "",
       "status": 1
     },
     {
-      "id": 2,
-      "title": "Đánh giá sản  ",
-      "content": "lore Lorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitm 20",
-      "userID": 1,
+      "id": "Post002",
+      "title": "ng ty tự động toàn b",
+      "content": "Công ty tự động toàn bộ: tự bơi, tự lo, tự tìm hiểu. Không có ai chỉ dẫn cho bạn đâu, từ việc setup môi trường làm việc, kiến thức business của dự án. Mặc dù dự án làm hơn 20 năm, nếu bạn là người mới vào bạn sẽ phải tự tìm hiểu, tự mò từ việc set up môi trường, đến việc cấp account. Bạn tự tìm người để hỏi. Nói chung tất cả mọi việc đều tự bạn lo liệu lấy chứ không có sự hỗ trợ nào cả. Các bạn QE và Dev chú ý hé.",
+      "userID": "",
       "status": 1
     },
     {
-      "id": 3,
-      "title": "Đánh giá sản A",
-      "content": "lorem 20",
-      "userID": 1,
+      "id": "Post003",
+      "title": "aa",
+      "content": "Công ty tự động toàn bộ: tự bơi, tự lo, tự tìm hiểu. Không có ai chỉ dẫn cho bạn đâu, từ việc setup môi trường làm việc, kiến thức business của dự án. Mặc dù dự án làm hơn 20 năm, nếu bạn là người mới vào bạn sẽ phải tự tìm hiểu, tự mò từ việc set up môi trường, đến việc cấp account. Bạn tự tìm người để hỏi. Nói chung tất cả mọi việc đều tự bạn lo liệu lấy chứ không có sự hỗ trợ nào cả. Các bạn QE và Dev chú ý hé.Công ty tự động toàn bộ: tự bơi, tự lo, tự tìm hiểu. Không có ai chỉ dẫn cho bạn đâu, từ việc setup môi trường làm việc, kiến thức business của dự án. Mặc dù dự án làm hơn 20 năm, nếu bạn là người mới vào bạn sẽ phải tự tìm hiểu, tự mò từ việc set up môi trường, đến việc cấp account. Bạn tự tìm người để hỏi. Nói chung tất cả mọi việc đều tự bạn lo liệu lấy chứ không có sự hỗ trợ nào cả. Các bạn QE và Dev chú ý hé.Công ty tự động toàn bộ: tự bơi, tự lo, tự tìm hiểu. Không có ai chỉ dẫn cho bạn đâu, từ việc setup môi trường làm việc, kiến thức business của dự án. Mặc dù dự án làm hơn 20 năm, nếu bạn là người mới vào bạn sẽ phải tự tìm hiểu, tự mò từ việc set up môi trường, đến việc cấp account. Bạn tự tìm người để hỏi. Nói chung tất cả mọi việc đều tự bạn lo liệu lấy chứ không có sự hỗ trợ nào cả. Các bạn QE và Dev chú ý hé.",
+      "userID": "",
       "status": 1
     },
     {
-      "id": 4,
-      "title": "Đánh giá sản A",
-      "content": "loLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitrem 20",
-      "userID": 1,
-      "status": 1
-    },
-    {
-      "id": 5,
-      "title": "Đánh giá sản b",
-      "content": "lorem Lorem ipsum dolor sit amet consectetur adipisicing elit20",
-      "userID": 1,
-      "status": 1
-    },
-    {
-      "id": 6,
-      "title": "Đánh giá sản Aa",
-      "content": "loreLorem ipsum dolor sit amet consectetur adipisicing elitm 20",
-      "userID": 1,
-      "status": 1
-    },
-    {
-      "id": 7,
-      "title": "Đánh giá sản Aadsa",
-      "content": "lorem 20",
-      "userID": 1,
-      "status": 1
-    },
-    {
-      "id": 8,
-      "title": "Đánh giá sản A",
-      "content": "lorLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitem 20",
-      "userID": 1,
-      "status": 1
-    },
-    {
-      "id": "Post009",
-      "title": "chữ số 5",
-      "content": "số 5 là số giữa 10, chia hết cho 5 và không chia hết cho 1 2 3   4",
+      "id": "Post004",
+      "title": "All lists have their top margin removed",
+      "content": "All lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removedAll lists have their top margin removed",
       "userID": "",
       "status": 1
     }
   ],
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "username": "tuyenpv",
       "password": "123",
       "role": "1",
       "status": 1
     }
   ],
-  "comment": []
+  "interactPost": [
+    {
+      "id": "LikePost001mGHcS",
+      "name": "tuyenpv",
+      "like": 1,
+      "comment": "",
+      "type": 1,
+      "postId": "Post001",
+      "userId": 1
+    },
+    {
+      "id": "LikePost002rBJ49",
+      "name": "tuyenpv",
+      "like": 1,
+      "comment": "",
+      "type": 1,
+      "postId": "Post002",
+      "userId": 1
+    }
+  ]
 }

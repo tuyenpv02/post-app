@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Flex, Image, Row, Space, Typography } from "antd";
 import { LikeOutlined, StarFilled } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Util from "../../util/Util";
+import InteractPostService from "../../services/InteractPostService";
+import { toast } from "react-toastify";
 
 function BodyLeft() {
+    const navigate = useNavigate();
+
     const [posts, setPosts] = useState([
         {
             id: 3,
@@ -29,6 +34,41 @@ function BodyLeft() {
         fetchPosts();
     }, []);
 
+    const likePost = async (e) => {
+        InteractPostService.getByPostIdAndUserId(e.id, Util.User.id)
+            .then((response) => {
+                if (response.data.length > 0) {
+                    console.log("tồn tại");
+                    return;
+                } else {
+                    let endId = Util.generateRandomString(5);
+                    const interactPost = {
+                        id: "Like" + e.id + endId,
+                        name: Util.User.name,
+                        like: 1,
+                        comment: "",
+                        type: 1,
+                        postId: e.id,
+                        userId: Util.User.id,
+                    };
+                    InteractPostService.add(interactPost)
+                        .then((res) => {
+                            console.log(res);
+                            // toast.success("Tạo post thành công");
+                            navigate("/");
+                        })
+                        .catch((err) => {
+                            toast.warning("Like thất bại ");
+                            console.log(err);
+                        });
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+                return;
+            });
+    };
+
     return (
         <>
             <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -36,14 +76,30 @@ function BodyLeft() {
                     <div className="col" key={idx}>
                         <div
                             className="card h-100"
-                            style={{ height: "600px", display: "flex", flexDirection: "column" }}
+                            style={{ maxHeight: "600px", display: "flex", flexDirection: "column" }}
                         >
                             <div className="card-body" style={{ flex: 1 }}>
-                                <h2 className="card-title">{element.title}</h2>
-                                <p className="card-text" style={{ color: "#7f858d", fontSize:18 }}>
-                                    {element.content} Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Ut magnam optio repudiandae! Fugiat ipsam modi
-                                    harum explicabo voluptate. Quia provident nobis perspiciatis!
+                                <h2
+                                    className="card-title"
+                                    onClick={() => {
+                                        navigate("/post/" + element.id);
+                                    }}
+                                >
+                                    {element.title}
+                                </h2>
+                                <p
+                                    className="card-text"
+                                    style={{
+                                        color: "#7f858d",
+                                        fontSize: 18,
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis",
+                                        display: "-webkit-box",
+                                        WebkitBoxOrient: "vertical",
+                                        WebkitLineClamp: 5 /* Số dòng muốn hiển thị */,
+                                    }}
+                                >
+                                    {element.content}
                                 </p>
                             </div>
                             <div
@@ -53,7 +109,14 @@ function BodyLeft() {
                                     marginTop: "auto",
                                 }}
                             >
-                                <Button size="large" type="text" icon={<LikeOutlined />}></Button>
+                                <Button
+                                    onClick={() => {
+                                        likePost(element);
+                                    }}
+                                    size="large"
+                                    type="text"
+                                    icon={<LikeOutlined />}
+                                ></Button>
                             </div>
                         </div>
                     </div>
